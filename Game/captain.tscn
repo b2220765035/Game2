@@ -1,0 +1,239 @@
+[gd_scene load_steps=43 format=3 uid="uid://drwaxggtrrlpm"]
+
+[ext_resource type="Texture2D" uid="uid://bm6cwypbq8yae" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/18-Air Attack 1/Air Attack 1 01.png" id="1_0lopv"]
+[ext_resource type="Script" path="res://captain.gd" id="1_v3dll"]
+[ext_resource type="Texture2D" uid="uid://co2pfobj2bbcc" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/18-Air Attack 1/Air Attack 1 02.png" id="2_6c7yo"]
+[ext_resource type="Texture2D" uid="uid://cg6tfpa2y5a4b" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/18-Air Attack 1/Air Attack 1 03.png" id="3_5wnpf"]
+[ext_resource type="Texture2D" uid="uid://ey04tv8da3q" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/19-Air Attack 2/Air Attack 2 01.png" id="4_3nymo"]
+[ext_resource type="Texture2D" uid="uid://dt3eke0874v7f" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/19-Air Attack 2/Air Attack 2 02.png" id="5_o5uyq"]
+[ext_resource type="Texture2D" uid="uid://dnw5ayoreqaqp" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/19-Air Attack 2/Air Attack 2 03.png" id="6_q42ow"]
+[ext_resource type="Texture2D" uid="uid://btq8e2q33s10a" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/15-Attack 1/Attack 1 01.png" id="7_3t1vt"]
+[ext_resource type="Texture2D" uid="uid://d138crfqkn3vc" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/15-Attack 1/Attack 1 02.png" id="8_kfjw5"]
+[ext_resource type="Texture2D" uid="uid://u6er1nmvteng" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/15-Attack 1/Attack 1 03.png" id="9_73631"]
+[ext_resource type="Texture2D" uid="uid://c5xyhvpm2y5r2" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/16-Attack 2/Attack 2 01.png" id="10_utjam"]
+[ext_resource type="Texture2D" uid="uid://jh1qde7v4fki" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/16-Attack 2/Attack 2 02.png" id="11_ywdr1"]
+[ext_resource type="Texture2D" uid="uid://dnho3qvcueph0" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/16-Attack 2/Attack 2 03.png" id="12_xj8co"]
+[ext_resource type="Texture2D" uid="uid://bvemke1ytod" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/17-Attack 3/Attack 3 01.png" id="13_pbt5b"]
+[ext_resource type="Texture2D" uid="uid://b1638hh3ma5y6" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/17-Attack 3/Attack 3 02.png" id="14_a0ju8"]
+[ext_resource type="Texture2D" uid="uid://deslty8o2kapl" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/17-Attack 3/Attack 3 03.png" id="15_liry1"]
+[ext_resource type="Texture2D" uid="uid://cdmtex3wjj4x0" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/12-Fall Sword/Fall Sword 01.png" id="16_rbt3d"]
+[ext_resource type="Texture2D" uid="uid://b5clamb3nroj2" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/13-Ground Sword/Ground Sword 01.png" id="17_3ejjy"]
+[ext_resource type="Texture2D" uid="uid://dc82dnkic0c5d" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/13-Ground Sword/Ground Sword 02.png" id="18_aqe82"]
+[ext_resource type="Texture2D" uid="uid://cmdkqi0t3dx3m" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/14-Hit Sword/Hit Sword 01.png" id="19_84i2r"]
+[ext_resource type="Texture2D" uid="uid://bxdo68fxe02j6" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/14-Hit Sword/Hit Sword 02.png" id="20_ot6bk"]
+[ext_resource type="Texture2D" uid="uid://bejjo6mw436i2" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/14-Hit Sword/Hit Sword 03.png" id="21_tkbii"]
+[ext_resource type="Texture2D" uid="uid://bhi2l1ibkyif8" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/14-Hit Sword/Hit Sword 04.png" id="22_1v2sv"]
+[ext_resource type="Texture2D" uid="uid://crj46wvk0n8cn" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/09-Idle Sword/Idle Sword 01.png" id="23_t78t3"]
+[ext_resource type="Texture2D" uid="uid://bm6lsfvj2h4xo" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/09-Idle Sword/Idle Sword 02.png" id="24_emydh"]
+[ext_resource type="Texture2D" uid="uid://cerxywphr3jcy" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/09-Idle Sword/Idle Sword 03.png" id="25_qjcrx"]
+[ext_resource type="Texture2D" uid="uid://ciyce8j7qk6i5" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/09-Idle Sword/Idle Sword 04.png" id="26_qds23"]
+[ext_resource type="Texture2D" uid="uid://bup10ogs2etti" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/09-Idle Sword/Idle Sword 05.png" id="27_nhn8p"]
+[ext_resource type="Texture2D" uid="uid://bkggtfbm4m1bl" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/11-Jump Sword/Jump Sword 01.png" id="28_cpqym"]
+[ext_resource type="Texture2D" uid="uid://bpujmpjjrpyt5" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/11-Jump Sword/Jump Sword 02.png" id="29_80uvs"]
+[ext_resource type="Texture2D" uid="uid://dca56k3frwsii" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/11-Jump Sword/Jump Sword 03.png" id="30_fb2a2"]
+[ext_resource type="Texture2D" uid="uid://dupo57a1kd4do" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/10-Run Sword/Run Sword 01.png" id="31_gxpqk"]
+[ext_resource type="Texture2D" uid="uid://qlakcujpvls6" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/10-Run Sword/Run Sword 02.png" id="32_s7dfw"]
+[ext_resource type="Texture2D" uid="uid://71iqtiun47pm" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/10-Run Sword/Run Sword 03.png" id="33_b6eug"]
+[ext_resource type="Texture2D" uid="uid://cn07h5gcop12c" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/10-Run Sword/Run Sword 04.png" id="34_wyxvb"]
+[ext_resource type="Texture2D" uid="uid://dnswa11x5l5h8" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/10-Run Sword/Run Sword 05.png" id="35_qghpu"]
+[ext_resource type="Texture2D" uid="uid://d3frr3thjvi85" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/10-Run Sword/Run Sword 06.png" id="36_kkrhc"]
+[ext_resource type="Texture2D" uid="uid://bxrbbn6v4r6px" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/20-Throw Sword/Throw Sword 01.png" id="37_x8460"]
+[ext_resource type="Texture2D" uid="uid://diet8cy3cs2v1" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/20-Throw Sword/Throw Sword 02.png" id="38_1hr3s"]
+[ext_resource type="Texture2D" uid="uid://ckw1t0nea4bsc" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/20-Throw Sword/Throw Sword 03.png" id="39_qs38j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k1una"]
+size = Vector2(18, 26)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_do6be"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_0lopv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_6c7yo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_5wnpf")
+}],
+"loop": true,
+"name": &"air attack 1",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_3nymo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_o5uyq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_q42ow")
+}],
+"loop": true,
+"name": &"air attack 2",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_3t1vt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_kfjw5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_73631")
+}],
+"loop": true,
+"name": &"attack 1",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_utjam")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ywdr1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_xj8co")
+}],
+"loop": true,
+"name": &"attack 2",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_pbt5b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_a0ju8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_liry1")
+}],
+"loop": true,
+"name": &"attack 3",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_rbt3d")
+}],
+"loop": true,
+"name": &"fall sword",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_3ejjy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_aqe82")
+}],
+"loop": true,
+"name": &"ground sword",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_84i2r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ot6bk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_tkbii")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_1v2sv")
+}],
+"loop": true,
+"name": &"hit sword",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_t78t3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_emydh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_qjcrx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_qds23")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_nhn8p")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("28_cpqym")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_80uvs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_fb2a2")
+}],
+"loop": true,
+"name": &"jump sword",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("31_gxpqk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_s7dfw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_b6eug")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_wyxvb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_qghpu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_kkrhc")
+}],
+"loop": true,
+"name": &"run sword",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("37_x8460")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_1hr3s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_qs38j")
+}],
+"loop": true,
+"name": &"throw sword",
+"speed": 8.0
+}]
+
+[node name="Captain" type="CharacterBody2D"]
+script = ExtResource("1_v3dll")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -2)
+shape = SubResource("RectangleShape2D_k1una")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1)
+sprite_frames = SubResource("SpriteFrames_do6be")
+animation = &"ground sword"
+frame_progress = 0.242181
