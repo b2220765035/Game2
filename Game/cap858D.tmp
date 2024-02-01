@@ -235,7 +235,7 @@ unique_name_in_owner = true
 position = Vector2(2.08165e-12, 2.08165e-12)
 sprite_frames = SubResource("SpriteFrames_do6be")
 animation = &"attack 1"
-frame_progress = 0.37483
+frame_progress = 0.163174
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2.08165e-12, 0)
@@ -246,9 +246,10 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="hit area" type="CollisionShape2D" parent="CharacterBody2D"]
+light_mask = 2
+visibility_layer = 2
 position = Vector2(17, 4)
 shape = SubResource("RectangleShape2D_l3lsx")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 10.0
 one_shot = true

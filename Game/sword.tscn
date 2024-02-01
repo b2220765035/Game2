@@ -1,0 +1,99 @@
+[gd_scene load_steps=19 format=3 uid="uid://dp3wqjdltjcou"]
+
+[ext_resource type="Texture2D" uid="uid://d1ah65vdd2ays" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Sword/23-Sword Embedded/Sword Embedded 01.png" id="1_qnd42"]
+[ext_resource type="Texture2D" uid="uid://c7w0jx7g8yrjr" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Sword/23-Sword Embedded/Sword Embedded 02.png" id="2_x82qo"]
+[ext_resource type="Texture2D" uid="uid://c3viwmwd8nx5u" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Sword/23-Sword Embedded/Sword Embedded 03.png" id="3_tolov"]
+[ext_resource type="Texture2D" uid="uid://fobbj02kngn0" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Sword/23-Sword Embedded/Sword Embedded 04.png" id="4_ci525"]
+[ext_resource type="Texture2D" uid="uid://drmtbtqmuyy6l" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Sword/21-Sword Idle/Sword Idle 01.png" id="5_cuip8"]
+[ext_resource type="Texture2D" uid="uid://cqewh4gp1ahdb" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Sword/21-Sword Idle/Sword Idle 02.png" id="6_vawgs"]
+[ext_resource type="Texture2D" uid="uid://bggrfq53keg80" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Sword/21-Sword Idle/Sword Idle 03.png" id="7_c8uqq"]
+[ext_resource type="Texture2D" uid="uid://crftuf6ddx1hu" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Sword/21-Sword Idle/Sword Idle 04.png" id="8_ml7ul"]
+[ext_resource type="Texture2D" uid="uid://b0qi57udfvypx" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Sword/21-Sword Idle/Sword Idle 05.png" id="9_tdhb1"]
+[ext_resource type="Texture2D" uid="uid://c2bb8kyxg3kea" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Sword/21-Sword Idle/Sword Idle 06.png" id="10_28gya"]
+[ext_resource type="Texture2D" uid="uid://bs01qlqwapjqj" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Sword/21-Sword Idle/Sword Idle 07.png" id="11_e0rk0"]
+[ext_resource type="Texture2D" uid="uid://hx8bkigd8sf4" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Sword/21-Sword Idle/Sword Idle 08.png" id="12_ovlgc"]
+[ext_resource type="Texture2D" uid="uid://dago7ap1jvwpr" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Sword/22-Sword Spinning/Sword Spinning 01.png" id="13_4oyry"]
+[ext_resource type="Texture2D" uid="uid://ddhj2rly2lus8" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Sword/22-Sword Spinning/Sword Spinning 02.png" id="14_0cr8q"]
+[ext_resource type="Texture2D" uid="uid://de300smm2om0b" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Sword/22-Sword Spinning/Sword Spinning 03.png" id="15_1vio3"]
+[ext_resource type="Texture2D" uid="uid://dtl7yui8lrgrs" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Sword/22-Sword Spinning/Sword Spinning 04.png" id="16_i0xjm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dl4nj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_qnd42")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_x82qo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_tolov")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ci525")
+}],
+"loop": true,
+"name": &"embedded",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_cuip8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_vawgs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_c8uqq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ml7ul")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_tdhb1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_28gya")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_e0rk0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ovlgc")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_4oyry")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_0cr8q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_1vio3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_i0xjm")
+}],
+"loop": true,
+"name": &"spin",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fcp0m"]
+size = Vector2(19, 7)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+position = Vector2(0, -0.5)
+scale = Vector2(1, 0.95)
+sprite_frames = SubResource("SpriteFrames_dl4nj")
+animation = &"idle"
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_fcp0m")
