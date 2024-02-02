@@ -1,7 +1,7 @@
-[gd_scene load_steps=44 format=3 uid="uid://pcckk0mxa7cg"]
+[gd_scene load_steps=45 format=3 uid="uid://pcckk0mxa7cg"]
 
 [ext_resource type="Texture2D" uid="uid://bx1row31f80jf" path="res://Treasure Hunters/The Crusty Crew/Sprites/Crabby/06-Anticipation/Anticipation 01.png" id="1_eau7k"]
-[ext_resource type="Script" path="res://crabby.gd" id="1_uxe8i"]
+[ext_resource type="Script" path="res://scripts/crabby.gd" id="1_uxe8i"]
 [ext_resource type="Texture2D" uid="uid://b4ow8t372hcta" path="res://Treasure Hunters/The Crusty Crew/Sprites/Crabby/06-Anticipation/Anticipation 02.png" id="2_alehl"]
 [ext_resource type="Texture2D" uid="uid://csuy0bv7btwph" path="res://Treasure Hunters/The Crusty Crew/Sprites/Crabby/06-Anticipation/Anticipation 03.png" id="3_m4c77"]
 [ext_resource type="Texture2D" uid="uid://bm5t6fu3gypq8" path="res://Treasure Hunters/The Crusty Crew/Sprites/Crabby/07-Attack/Attack 01.png" id="4_wspdg"]
@@ -105,7 +105,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("15_urwuh")
 }],
-"loop": true,
+"loop": false,
 "name": &"dead_hit",
 "speed": 8.0
 }, {
@@ -218,14 +218,30 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gbgbl"]
 size = Vector2(20, 21)
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_rhwna"]
+a = Vector2(89, -2)
+b = Vector2(-86, -2)
+
 [node name="Crabby" type="CharacterBody2D"]
+collision_layer = 3
 script = ExtResource("1_uxe8i")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_s84oo")
-animation = &"run"
-frame_progress = 0.58223
+animation = &"dead_ground"
+frame = 2
+frame_progress = 0.655871
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 2.5)
 shape = SubResource("RectangleShape2D_gbgbl")
+
+[node name="eye_sight" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="eye_sight"]
+shape = SubResource("SegmentShape2D_rhwna")
+
+[connection signal="body_entered" from="eye_sight" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="eye_sight" to="." method="_on_detection_area_body_exited"]

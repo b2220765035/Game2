@@ -1,7 +1,7 @@
 [gd_scene load_steps=44 format=3 uid="uid://drwaxggtrrlpm"]
 
 [ext_resource type="Texture2D" uid="uid://bm6cwypbq8yae" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/18-Air Attack 1/Air Attack 1 01.png" id="1_0lopv"]
-[ext_resource type="Script" path="res://captain.gd" id="1_v3dll"]
+[ext_resource type="Script" path="res://scripts/captain.gd" id="1_v3dll"]
 [ext_resource type="Texture2D" uid="uid://co2pfobj2bbcc" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/18-Air Attack 1/Air Attack 1 02.png" id="2_6c7yo"]
 [ext_resource type="Texture2D" uid="uid://cg6tfpa2y5a4b" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/18-Air Attack 1/Air Attack 1 03.png" id="3_5wnpf"]
 [ext_resource type="Texture2D" uid="uid://ey04tv8da3q" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/19-Air Attack 2/Air Attack 2 01.png" id="4_3nymo"]
@@ -224,10 +224,11 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k1una"]
 size = Vector2(18, 24)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_l3lsx"]
-size = Vector2(16, 7)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_08d77"]
+size = Vector2(18, 7.25)
 
 [node name="Captain" type="CharacterBody2D"]
+collision_layer = 5
 script = ExtResource("1_v3dll")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -235,20 +236,29 @@ unique_name_in_owner = true
 position = Vector2(2.08165e-12, 2.08165e-12)
 sprite_frames = SubResource("SpriteFrames_do6be")
 animation = &"attack 1"
-frame_progress = 0.37483
+frame_progress = 0.0734264
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2.08165e-12, 0)
 shape = SubResource("RectangleShape2D_k1una")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="attack_range" type="Area2D" parent="."]
 collision_layer = 2
 collision_mask = 2
 
-[node name="hit area" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(17, 4)
-shape = SubResource("RectangleShape2D_l3lsx")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="attack_range"]
+position = Vector2(17, 4.625)
+shape = SubResource("RectangleShape2D_08d77")
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 10.0
-one_shot = true
+[node name="animation_timer" type="Timer" parent="."]
+wait_time = 0.4
+
+[node name="cooldown_timer" type="Timer" parent="."]
+wait_time = 2.0
+
+[connection signal="body_entered" from="attack_range" to="." method="_on_attack_range_body_entered"]
+[connection signal="body_exited" from="attack_range" to="." method="_on_attack_range_body_exited"]
+[connection signal="timeout" from="animation_timer" to="." method="_on_animation_timer_timeout"]
+[connection signal="timeout" from="cooldown_timer" to="." method="_on_cooldown_timer_timeout"]

@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=3 uid="uid://cpwttqrc8fu0r"]
+
+[ext_resource type="PackedScene" uid="uid://drwaxggtrrlpm" path="res://scenes/captain.tscn" id="1_7hm46"]
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_fknen"]
+[ext_resource type="PackedScene" uid="uid://2puijmkglpfv" path="res://scenes/map.tscn" id="2_vp04l"]
+[ext_resource type="PackedScene" uid="uid://6a7owkgbpyu5" path="res://scenes/background.tscn" id="3_4i3de"]
+[ext_resource type="PackedScene" uid="uid://pcckk0mxa7cg" path="res://scenes/crabby.tscn" id="4_300jm"]
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_fknen")
+
+[node name="Captain" parent="." instance=ExtResource("1_7hm46")]
+position = Vector2(132, 546)
+
+[node name="map" parent="." instance=ExtResource("2_vp04l")]
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("3_4i3de")]
+
+[node name="Crabby" parent="." instance=ExtResource("4_300jm")]
+position = Vector2(889, 534)
+
+[node name="Crabby2" parent="." instance=ExtResource("4_300jm")]
+position = Vector2(210, 535)
