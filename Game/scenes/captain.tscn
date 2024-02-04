@@ -1,7 +1,7 @@
-[gd_scene load_steps=44 format=3 uid="uid://drwaxggtrrlpm"]
+[gd_scene load_steps=52 format=3 uid="uid://drwaxggtrrlpm"]
 
 [ext_resource type="Texture2D" uid="uid://bm6cwypbq8yae" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/18-Air Attack 1/Air Attack 1 01.png" id="1_0lopv"]
-[ext_resource type="Script" path="res://scripts/captain.gd" id="1_v3dll"]
+[ext_resource type="Script" path="res://scripts/captain/captain.gd" id="1_sd8ao"]
 [ext_resource type="Texture2D" uid="uid://co2pfobj2bbcc" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/18-Air Attack 1/Air Attack 1 02.png" id="2_6c7yo"]
 [ext_resource type="Texture2D" uid="uid://cg6tfpa2y5a4b" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/18-Air Attack 1/Air Attack 1 03.png" id="3_5wnpf"]
 [ext_resource type="Texture2D" uid="uid://ey04tv8da3q" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/19-Air Attack 2/Air Attack 2 01.png" id="4_3nymo"]
@@ -40,6 +40,11 @@
 [ext_resource type="Texture2D" uid="uid://bxrbbn6v4r6px" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/20-Throw Sword/Throw Sword 01.png" id="37_x8460"]
 [ext_resource type="Texture2D" uid="uid://diet8cy3cs2v1" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/20-Throw Sword/Throw Sword 02.png" id="38_1hr3s"]
 [ext_resource type="Texture2D" uid="uid://ckw1t0nea4bsc" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/20-Throw Sword/Throw Sword 03.png" id="39_qs38j"]
+[ext_resource type="Script" path="res://scripts/finite_state_machine.gd" id="41_7eefb"]
+[ext_resource type="Script" path="res://scripts/captain/captain_run_state.gd" id="42_eb7ui"]
+[ext_resource type="Script" path="res://scripts/captain/captain_idle_state.gd" id="43_pesvm"]
+[ext_resource type="Script" path="res://scripts/captain/captain_jump_state.gd" id="44_x0wsh"]
+[ext_resource type="Script" path="res://scripts/captain/captain_attack_state.gd" id="45_lhtxp"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_do6be"]
 animations = [{
@@ -227,9 +232,30 @@ size = Vector2(18, 24)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_08d77"]
 size = Vector2(18, 7.25)
 
-[node name="Captain" type="CharacterBody2D"]
-collision_layer = 5
-script = ExtResource("1_v3dll")
+[sub_resource type="Theme" id="Theme_fysoe"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_usy35"]
+bg_color = Color(0.6, 0.6, 0.6, 0.568627)
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gjspe"]
+bg_color = Color(1, 0, 0, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[node name="Captain" type="CharacterBody2D" node_paths=PackedStringArray("animator")]
+collision_layer = 69
+collision_mask = 65
+script = ExtResource("1_sd8ao")
+speed = 150
+animator = NodePath("AnimatedSprite2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
@@ -245,20 +271,51 @@ shape = SubResource("RectangleShape2D_k1una")
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="attack_range" type="Area2D" parent="."]
+position = Vector2(17, 5)
 collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="attack_range"]
-position = Vector2(17, 4.625)
 shape = SubResource("RectangleShape2D_08d77")
 
-[node name="animation_timer" type="Timer" parent="."]
-wait_time = 0.4
+[node name="FiniteStateMachine" type="Node" parent="." node_paths=PackedStringArray("state")]
+script = ExtResource("41_7eefb")
+state = NodePath("CaptainIdleState")
 
-[node name="cooldown_timer" type="Timer" parent="."]
-wait_time = 2.0
+[node name="CaptainRunState" type="Node" parent="FiniteStateMachine" node_paths=PackedStringArray("captain", "animator", "attack_range")]
+script = ExtResource("42_eb7ui")
+captain = NodePath("../..")
+animator = NodePath("../../AnimatedSprite2D")
+attack_range = NodePath("../../attack_range")
+
+[node name="CaptainIdleState" type="Node" parent="FiniteStateMachine" node_paths=PackedStringArray("captain", "animator")]
+script = ExtResource("43_pesvm")
+captain = NodePath("../..")
+animator = NodePath("../../AnimatedSprite2D")
+
+[node name="CaptainJumpState" type="Node" parent="FiniteStateMachine" node_paths=PackedStringArray("captain", "animator")]
+script = ExtResource("44_x0wsh")
+captain = NodePath("../..")
+animator = NodePath("../../AnimatedSprite2D")
+
+[node name="CaptainAttackState" type="Node" parent="FiniteStateMachine" node_paths=PackedStringArray("captain", "animator", "attack_range")]
+script = ExtResource("45_lhtxp")
+captain = NodePath("../..")
+animator = NodePath("../../AnimatedSprite2D")
+attack_range = NodePath("../../attack_range")
+
+[node name="health_bar" type="ProgressBar" parent="."]
+offset_left = -23.0
+offset_top = -24.0
+offset_right = 23.0
+offset_bottom = -17.0
+theme = SubResource("Theme_fysoe")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0, 0, 1)
+theme_override_styles/background = SubResource("StyleBoxFlat_usy35")
+theme_override_styles/fill = SubResource("StyleBoxFlat_gjspe")
+value = 50.0
+show_percentage = false
 
 [connection signal="body_entered" from="attack_range" to="." method="_on_attack_range_body_entered"]
 [connection signal="body_exited" from="attack_range" to="." method="_on_attack_range_body_exited"]
-[connection signal="timeout" from="animation_timer" to="." method="_on_animation_timer_timeout"]
-[connection signal="timeout" from="cooldown_timer" to="." method="_on_cooldown_timer_timeout"]
