@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://pcckk0mxa7cg"]
+[gd_scene load_steps=54 format=3 uid="uid://pcckk0mxa7cg"]
 
 [ext_resource type="Texture2D" uid="uid://bx1row31f80jf" path="res://Treasure Hunters/The Crusty Crew/Sprites/Crabby/06-Anticipation/Anticipation 01.png" id="1_eau7k"]
 [ext_resource type="Script" path="res://scripts/crabby/crabby.gd" id="1_xvb3n"]
@@ -45,6 +45,7 @@
 [ext_resource type="Script" path="res://scripts/crabby/crabby_attack_state.gd" id="43_2b5bg"]
 [ext_resource type="Script" path="res://scripts/crabby/crabby_chase_state.gd" id="44_xxliq"]
 [ext_resource type="Script" path="res://scripts/crabby/crabby_wander_state.gd" id="45_2hbr8"]
+[ext_resource type="Script" path="res://scripts/crabby/crabby_death_state.gd" id="46_veab8"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_s84oo"]
 animations = [{
@@ -77,7 +78,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"attack",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -228,7 +229,7 @@ b = Vector2(-86, -2)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ymvou"]
 radius = 6.0
-height = 48.0
+height = 56.0
 
 [sub_resource type="Theme" id="Theme_wddfi"]
 
@@ -249,7 +250,7 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
 [node name="Crabby" type="CharacterBody2D" node_paths=PackedStringArray("ray_cast", "animator")]
-collision_layer = 3
+collision_layer = 2
 collision_mask = 16
 script = ExtResource("1_xvb3n")
 ray_cast = NodePath("RayCast2D")
@@ -257,8 +258,8 @@ animator = NodePath("AnimatedSprite2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_s84oo")
-animation = &"attack"
-frame_progress = 0.035528
+animation = &"hit"
+frame_progress = 0.241679
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 2.5)
@@ -282,17 +283,24 @@ animator = NodePath("../../AnimatedSprite2D")
 eye_sight = NodePath("../../eye_sight")
 attack_range = NodePath("../../attack_range")
 
-[node name="CrabbyChaseState" type="Node" parent="FiniteStateMachine" node_paths=PackedStringArray("crabby", "animator", "ray_cast")]
+[node name="CrabbyChaseState" type="Node" parent="FiniteStateMachine" node_paths=PackedStringArray("crabby", "animator", "ray_cast", "eye_sight")]
 script = ExtResource("44_xxliq")
 crabby = NodePath("../..")
 animator = NodePath("../../AnimatedSprite2D")
 ray_cast = NodePath("../../RayCast2D")
+eye_sight = NodePath("../../eye_sight")
 
-[node name="CrabbyWanderState" type="Node" parent="FiniteStateMachine" node_paths=PackedStringArray("crabby", "animator", "ray_cast")]
+[node name="CrabbyWanderState" type="Node" parent="FiniteStateMachine" node_paths=PackedStringArray("crabby", "animator", "ray_cast", "eye_sight")]
 script = ExtResource("45_2hbr8")
 crabby = NodePath("../..")
 animator = NodePath("../../AnimatedSprite2D")
 ray_cast = NodePath("../../RayCast2D")
+eye_sight = NodePath("../../eye_sight")
+
+[node name="CrabbyDeathState" type="Node" parent="FiniteStateMachine" node_paths=PackedStringArray("crabby", "animator")]
+script = ExtResource("46_veab8")
+crabby = NodePath("../..")
+animator = NodePath("../../AnimatedSprite2D")
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 target_position = Vector2(-30, 2.08165e-12)
@@ -319,8 +327,3 @@ theme_override_styles/background = SubResource("StyleBoxFlat_udcmo")
 theme_override_styles/fill = SubResource("StyleBoxFlat_qbsur")
 value = 50.0
 show_percentage = false
-
-[connection signal="body_entered" from="eye_sight" to="." method="_on_detection_area_body_entered"]
-[connection signal="body_entered" from="eye_sight" to="FiniteStateMachine/CrabbyWanderState" method="_on_eye_sight_body_entered"]
-[connection signal="body_exited" from="eye_sight" to="." method="_on_detection_area_body_exited"]
-[connection signal="body_exited" from="eye_sight" to="FiniteStateMachine/CrabbyChaseState" method="_on_eye_sight_body_exited"]

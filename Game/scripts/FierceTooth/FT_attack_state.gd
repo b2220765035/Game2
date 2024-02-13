@@ -1,11 +1,11 @@
-class_name CrabbyAttackState
+class_name FTAttackState
 extends State
 
 
 signal player_exited_attack_range
 
 
-@export var crabby: Crabby
+@export var fierce_tooth: FierceTooth
 @export var animator: AnimatedSprite2D
 @export var eye_sight: Area2D
 @export var attack_range: Area2D
@@ -16,7 +16,7 @@ var is_attacked: bool
 
 func _ready():
 	set_physics_process(false)
-
+	
 
 func _enter_state() -> void:
 	set_physics_process(true)
@@ -29,22 +29,18 @@ func _exit_state() -> void:
 
 
 func _physics_process(delta):
-	var x_distance = crabby.player.position.x - crabby.position.x
+	var x_distance = fierce_tooth.player.position.x - fierce_tooth.position.x
 	if x_distance >= 0:
-		crabby.direction = 1
+		fierce_tooth.direction = 1
 	elif x_distance < 0:
-		crabby.direction = -1
+		fierce_tooth.direction = -1
+	print(abs(x_distance))
+	if abs(x_distance) > 21:
+		player_exited_attack_range.emit()
 		
-	
-	var captain = null
-	if not attack_range.get_overlapping_bodies().is_empty():
-		captain = attack_range.get_overlapping_bodies()[0]
-	
+	var captain = attack_range.get_overlapping_bodies()[0]
 	if captain and animator.frame == 2 and !is_attacked:
 		captain.take_damage(20)
 		is_attacked = true
 	elif animator.frame == 0:
 		is_attacked = false
-	
-	if not captain and animator.frame == 3:
-		player_exited_attack_range.emit()

@@ -2,6 +2,10 @@ class_name CaptainJumpState
 extends State
 
 
+signal fall
+signal air_attack
+
+
 @export var captain: Captain
 @export var animator: AnimatedSprite2D
 
@@ -12,15 +16,18 @@ func _ready():
 
 func _enter_state() -> void:
 	set_physics_process(true)
-	animator.play("jump sword")
-	finished = false
+	captain.velocity.y = -350
+	captain.can_jump = false
+	if captain.has_sword:
+		animator.play("jump sword")
+	else:
+		animator.play("jump")
 
 
 func _exit_state() -> void:
 	set_physics_process(false)
 
 
-var finished = false
 func _physics_process(delta):
 	
 	if Input.is_action_pressed("move_left"):
@@ -31,12 +38,13 @@ func _physics_process(delta):
 		captain.velocity.x = captain.direction * captain.speed
 	else:
 		captain.velocity.x = 0
-	if captain.is_on_floor():
-		if finished:
-			state_finished.emit()
-		else:
-			finished = true
-			captain.velocity.y = -350
+	
+	if captain.velocity.y >= 0:
+		fall.emit()
+	
+	if Input.is_action_just_pressed("attack1") and captain.has_sword:
+		air_attack.emit()
+
 	captain.move_and_slide()
 
 

@@ -8,6 +8,7 @@ signal player_entered
 @export var crabby: Crabby
 @export var animator: AnimatedSprite2D
 @export var ray_cast: RayCast2D
+@export var eye_sight: Area2D
 
 
 func _ready():
@@ -26,13 +27,13 @@ func _exit_state() -> void:
 
 
 func _physics_process(delta):
-	animator.flip_h = false if crabby.direction == -1 else true
 	if ray_cast.is_colliding():
 		crabby.direction = -crabby.direction
 		crabby.velocity.x = crabby.speed * crabby.direction
+	
+	var bodies = eye_sight.get_overlapping_bodies()
+	if !bodies.is_empty():
+		crabby.player = bodies[0]
+		player_entered.emit()
+	
 	crabby.move_and_slide()
-
-
-func _on_eye_sight_body_entered(body):
-	crabby.player = body
-	player_entered.emit()

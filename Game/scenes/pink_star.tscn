@@ -1,44 +1,48 @@
-[gd_scene load_steps=42 format=3 uid="uid://cm5y3mvy42o1p"]
+[gd_scene load_steps=46 format=3 uid="uid://cm5y3mvy42o1p"]
 
-[ext_resource type="Texture2D" uid="uid://dhsjpdtfbtohl" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/06-Anticipation/Anticipation 01.png" id="1_wrc8r"]
-[ext_resource type="Texture2D" uid="uid://bcuqc24rkpyoc" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/06-Anticipation/Anticipation 02.png" id="2_358v2"]
-[ext_resource type="Texture2D" uid="uid://b8dtwk6rv6b8e" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/06-Anticipation/Anticipation 03.png" id="3_k01u4"]
-[ext_resource type="Texture2D" uid="uid://6vteua1awpkv" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/07-Attack/Attack 01.png" id="4_vu8bw"]
-[ext_resource type="Texture2D" uid="uid://djc2r6dvgq300" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/07-Attack/Attack 02.png" id="5_5rrl3"]
-[ext_resource type="Texture2D" uid="uid://bflx8nmyv3ype" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/07-Attack/Attack 03.png" id="6_v1bk6"]
-[ext_resource type="Texture2D" uid="uid://difdn50gg33ul" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/07-Attack/Attack 04.png" id="7_ank68"]
-[ext_resource type="Texture2D" uid="uid://dnxhmngtnafiq" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/10-Dead Ground/Dead Ground 01.png" id="8_usqrt"]
-[ext_resource type="Texture2D" uid="uid://qh68ig6g2p3a" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/10-Dead Ground/Dead Ground 02.png" id="9_s4umc"]
-[ext_resource type="Texture2D" uid="uid://cravcmjeu7uem" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/10-Dead Ground/Dead Ground 03.png" id="10_4wfl6"]
-[ext_resource type="Texture2D" uid="uid://d3n7cb3i18yth" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/10-Dead Ground/Dead Ground 04.png" id="11_ubhbs"]
-[ext_resource type="Texture2D" uid="uid://dcgeqbbre1lqa" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/09-Dead Hit/Dead Hit 01.png" id="12_rcn5i"]
-[ext_resource type="Texture2D" uid="uid://bxdofa4npn6on" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/09-Dead Hit/Dead Hit 02.png" id="13_t87lh"]
-[ext_resource type="Texture2D" uid="uid://bhm3fegajts7w" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/09-Dead Hit/Dead Hit 03.png" id="14_aerq7"]
-[ext_resource type="Texture2D" uid="uid://3mcgq6e4a7jn" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/09-Dead Hit/Dead Hit 04.png" id="15_jrxyp"]
-[ext_resource type="Texture2D" uid="uid://cdeyx31ggk8nd" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/04-Fall/Fall 01.png" id="16_6xset"]
-[ext_resource type="Texture2D" uid="uid://b8u3hgpvwwe7k" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/05-Ground/Ground 01.png" id="17_88u1l"]
-[ext_resource type="Texture2D" uid="uid://b2wpsd7ggtmnd" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/05-Ground/Ground 02.png" id="18_1hiet"]
-[ext_resource type="Texture2D" uid="uid://djpbyj8sm32lm" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/08-Hit/Hit 01.png" id="19_looq3"]
-[ext_resource type="Texture2D" uid="uid://ns1lqnv1284p" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/08-Hit/Hit 02.png" id="20_c0jvq"]
-[ext_resource type="Texture2D" uid="uid://ci1qhtposifea" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/08-Hit/Hit 03.png" id="21_bjkai"]
-[ext_resource type="Texture2D" uid="uid://dhtf13yaxiowj" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/08-Hit/Hit 04.png" id="22_jhxsr"]
-[ext_resource type="Texture2D" uid="uid://fut0utolfwns" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 01.png" id="23_bqxjp"]
-[ext_resource type="Texture2D" uid="uid://b1bf4f14u0c27" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 02.png" id="24_qhh31"]
-[ext_resource type="Texture2D" uid="uid://cjweysst61knm" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 03.png" id="25_403fn"]
-[ext_resource type="Texture2D" uid="uid://dfadsb1imqu4h" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 04.png" id="26_n60mg"]
-[ext_resource type="Texture2D" uid="uid://beu8pp07v0tmv" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 05.png" id="27_sjmso"]
-[ext_resource type="Texture2D" uid="uid://tq8byj2ny6cc" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 06.png" id="28_cr8uj"]
-[ext_resource type="Texture2D" uid="uid://bp1885km2iplm" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 07.png" id="29_lyphr"]
-[ext_resource type="Texture2D" uid="uid://cf1uew7xqk8uh" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 08.png" id="30_dtq5e"]
-[ext_resource type="Texture2D" uid="uid://82voumg6crle" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/03-Jump/Jump 01.png" id="31_3hkbx"]
-[ext_resource type="Texture2D" uid="uid://dp6v03k7teqw5" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/03-Jump/Jump 02.png" id="32_k1uj8"]
-[ext_resource type="Texture2D" uid="uid://eth0yfwg40ok" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/03-Jump/Jump 03.png" id="33_enagm"]
-[ext_resource type="Texture2D" uid="uid://d03eb6tedvpsi" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/02-Run/Run 01.png" id="34_1xkmc"]
-[ext_resource type="Texture2D" uid="uid://cv20fprs15xa2" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/02-Run/Run 02.png" id="35_fgs4f"]
-[ext_resource type="Texture2D" uid="uid://duq1gpqbwp2im" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/02-Run/Run 03.png" id="36_tfxiq"]
-[ext_resource type="Texture2D" uid="uid://bn63v0ps2jfp2" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/02-Run/Run 04.png" id="37_qmxoq"]
-[ext_resource type="Texture2D" uid="uid://biso2tiryaqx1" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/02-Run/Run 05.png" id="38_8w03j"]
-[ext_resource type="Texture2D" uid="uid://s23fulcyy2om" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/02-Run/Run 06.png" id="39_kkqbx"]
+[ext_resource type="Script" path="res://scripts/pink_star/pink_star.gd" id="1_0gvnj"]
+[ext_resource type="Texture2D" uid="uid://bcwcqrfwj2ec3" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/06-Anticipation/Anticipation 01.png" id="1_wrc8r"]
+[ext_resource type="Texture2D" uid="uid://utcg2syu553o" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/06-Anticipation/Anticipation 02.png" id="2_358v2"]
+[ext_resource type="Texture2D" uid="uid://d0r1yi53q570c" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/06-Anticipation/Anticipation 03.png" id="3_k01u4"]
+[ext_resource type="Texture2D" uid="uid://38dr0nv8egun" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/07-Attack/Attack 01.png" id="4_vu8bw"]
+[ext_resource type="Texture2D" uid="uid://c6fx8dgw8twp4" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/07-Attack/Attack 02.png" id="5_5rrl3"]
+[ext_resource type="Texture2D" uid="uid://cvkikwr3v7wkx" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/07-Attack/Attack 03.png" id="6_v1bk6"]
+[ext_resource type="Texture2D" uid="uid://c7r0wfqt25aoq" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/07-Attack/Attack 04.png" id="7_ank68"]
+[ext_resource type="Texture2D" uid="uid://c5fa7tiwqtf34" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/10-Dead Ground/Dead Ground 01.png" id="8_usqrt"]
+[ext_resource type="Texture2D" uid="uid://beefnks4l605i" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/10-Dead Ground/Dead Ground 02.png" id="9_s4umc"]
+[ext_resource type="Texture2D" uid="uid://cjps02ppx3ku4" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/10-Dead Ground/Dead Ground 03.png" id="10_4wfl6"]
+[ext_resource type="Texture2D" uid="uid://ddkv5qxcwgau" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/10-Dead Ground/Dead Ground 04.png" id="11_ubhbs"]
+[ext_resource type="Texture2D" uid="uid://b2vjg55m43yxw" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/09-Dead Hit/Dead Hit 01.png" id="12_rcn5i"]
+[ext_resource type="Texture2D" uid="uid://cyxvae7htyy64" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/09-Dead Hit/Dead Hit 02.png" id="13_t87lh"]
+[ext_resource type="Texture2D" uid="uid://b2hlnen5ajkox" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/09-Dead Hit/Dead Hit 03.png" id="14_aerq7"]
+[ext_resource type="Texture2D" uid="uid://cqcymkcsojx2j" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/09-Dead Hit/Dead Hit 04.png" id="15_jrxyp"]
+[ext_resource type="Texture2D" uid="uid://ba5fqauj1vjlv" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/04-Fall/Fall 01.png" id="16_6xset"]
+[ext_resource type="Texture2D" uid="uid://mnysqpk7e7e4" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/05-Ground/Ground 01.png" id="17_88u1l"]
+[ext_resource type="Texture2D" uid="uid://6ge2xpayxiyh" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/05-Ground/Ground 02.png" id="18_1hiet"]
+[ext_resource type="Texture2D" uid="uid://bjw7osexotftf" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/08-Hit/Hit 01.png" id="19_looq3"]
+[ext_resource type="Texture2D" uid="uid://bb8y22gxorxx1" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/08-Hit/Hit 02.png" id="20_c0jvq"]
+[ext_resource type="Texture2D" uid="uid://d23asa6fnqogb" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/08-Hit/Hit 03.png" id="21_bjkai"]
+[ext_resource type="Texture2D" uid="uid://du31d71eri4w2" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/08-Hit/Hit 04.png" id="22_jhxsr"]
+[ext_resource type="Texture2D" uid="uid://dk0v3yeu6bqgs" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 01.png" id="23_bqxjp"]
+[ext_resource type="Texture2D" uid="uid://caedmgbm76cu" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 02.png" id="24_qhh31"]
+[ext_resource type="Texture2D" uid="uid://fsf1j8u2b2lc" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 03.png" id="25_403fn"]
+[ext_resource type="Texture2D" uid="uid://0in1b3x8g62p" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 04.png" id="26_n60mg"]
+[ext_resource type="Texture2D" uid="uid://cknd2lldw1r86" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 05.png" id="27_sjmso"]
+[ext_resource type="Texture2D" uid="uid://c3kbtmpcfdnui" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 06.png" id="28_cr8uj"]
+[ext_resource type="Texture2D" uid="uid://b2hopkdvw8b1u" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 07.png" id="29_lyphr"]
+[ext_resource type="Texture2D" uid="uid://0hsahoycq71o" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 08.png" id="30_dtq5e"]
+[ext_resource type="Texture2D" uid="uid://d0u34nlkm1mvn" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/03-Jump/Jump 01.png" id="31_3hkbx"]
+[ext_resource type="Texture2D" uid="uid://dnvyaofcdxiqw" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/03-Jump/Jump 02.png" id="32_k1uj8"]
+[ext_resource type="Texture2D" uid="uid://davuxukfb23pj" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/03-Jump/Jump 03.png" id="33_enagm"]
+[ext_resource type="Texture2D" uid="uid://dg3cwnt4b2v4h" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/02-Run/Run 01.png" id="34_1xkmc"]
+[ext_resource type="Texture2D" uid="uid://d1jyqmx8jqufs" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/02-Run/Run 02.png" id="35_fgs4f"]
+[ext_resource type="Texture2D" uid="uid://0cfav3qjscsc" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/02-Run/Run 03.png" id="36_tfxiq"]
+[ext_resource type="Texture2D" uid="uid://bqgngik4migfy" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/02-Run/Run 04.png" id="37_qmxoq"]
+[ext_resource type="Texture2D" uid="uid://ci138vrde7u8c" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/02-Run/Run 05.png" id="38_8w03j"]
+[ext_resource type="Texture2D" uid="uid://d2eppcr2okrdl" path="res://Treasure Hunters/The Crusty Crew/Sprites/Pink Star/02-Run/Run 06.png" id="39_kkqbx"]
+[ext_resource type="Script" path="res://scripts/finite_state_machine.gd" id="41_v6xyr"]
+[ext_resource type="Script" path="res://scripts/pink_star/pink_star_wander_state.gd" id="42_6ryep"]
+[ext_resource type="Script" path="res://scripts/pink_star/pink_star_attack_state.gd" id="43_o6ttv"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_r3dwf"]
 animations = [{
@@ -213,13 +217,52 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3dhw7"]
 size = Vector2(16, 20)
 
-[node name="PinkStar" type="CharacterBody2D"]
+[node name="PinkStar" type="CharacterBody2D" node_paths=PackedStringArray("wall_detector", "gap_detector", "eye_sight")]
+collision_layer = 0
+script = ExtResource("1_0gvnj")
+wall_detector = NodePath("wall_detector")
+gap_detector = NodePath("gap_detector")
+eye_sight = NodePath("eye_sight")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_r3dwf")
 animation = &"run"
-frame_progress = 0.659737
+frame = 5
+frame_progress = 0.319238
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_3dhw7")
+
+[node name="FiniteStateMachine" type="Node" parent="." node_paths=PackedStringArray("state")]
+script = ExtResource("41_v6xyr")
+state = NodePath("PinkStarWanderState")
+
+[node name="PinkStarWanderState" type="Node" parent="FiniteStateMachine" node_paths=PackedStringArray("pink_star", "animator", "wall_detector", "gap_detector", "eye_sight")]
+script = ExtResource("42_6ryep")
+pink_star = NodePath("../..")
+animator = NodePath("../../AnimatedSprite2D")
+wall_detector = NodePath("../../wall_detector")
+gap_detector = NodePath("../../gap_detector")
+eye_sight = NodePath("../../eye_sight")
+
+[node name="PinkStarAttackState" type="Node" parent="FiniteStateMachine" node_paths=PackedStringArray("pink_star", "animator", "wall_detector", "gap_detector", "eye_sight")]
+script = ExtResource("43_o6ttv")
+pink_star = NodePath("../..")
+animator = NodePath("../../AnimatedSprite2D")
+wall_detector = NodePath("../../wall_detector")
+gap_detector = NodePath("../../gap_detector")
+eye_sight = NodePath("../../eye_sight")
+
+[node name="wall_detector" type="RayCast2D" parent="."]
+exclude_parent = false
+target_position = Vector2(-30, 2.08165e-12)
+collision_mask = 8
+
+[node name="gap_detector" type="RayCast2D" parent="."]
+position = Vector2(-8, 2.08165e-12)
+target_position = Vector2(2.08165e-12, 25)
+
+[node name="eye_sight" type="RayCast2D" parent="."]
+target_position = Vector2(-80, 2.08165e-12)
+collision_mask = 4
